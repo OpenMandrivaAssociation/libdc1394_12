@@ -13,7 +13,9 @@ URL: 		http://sourceforge.net/projects/libdc1394/
 Source0: 	%{oname}-%{version}.tar.bz2
 Patch0:		libdc1394-0.9.5-lib64.patch
 Patch1:		libdc1394-1.2.1-clk_tck-deprecated.patch
-BuildRequires: 	libraw1394_8-devel X11-devel
+BuildRequires: 	libraw1394_8-devel
+BuildRequires:	libx11-devel
+BuildRequires:	libxv-devel
 Buildroot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -62,7 +64,7 @@ autoreconf -fi
 %install
 rm -rf %{buildroot}
 
-%makeinstall
+%makeinstall_std
 
 %if %mdkversion < 200900
 %post -n %{libname} -p /sbin/ldconfig
