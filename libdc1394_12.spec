@@ -13,9 +13,11 @@ URL: 		http://sourceforge.net/projects/libdc1394/
 Source0: 	%{oname}-%{version}.tar.bz2
 Patch0:		libdc1394-0.9.5-lib64.patch
 Patch1:		libdc1394-1.2.1-clk_tck-deprecated.patch
+Patch2:		libdc1394-1.2.1-videodev.h.patch
 BuildRequires: 	libraw1394_8-devel
 BuildRequires:	libx11-devel
 BuildRequires:	libxv-devel
+BuildRequires:	libv4l-devel
 Buildroot: 	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
@@ -55,6 +57,7 @@ This archive contains the header-files for libdc1394 development
 %setup -q -n %oname-%version
 %patch0 -p1 -b .lib64
 %patch1 -p1 -b .clk_tck
+%patch2 -p0 -b .v4l
 autoreconf -fi
 
 %build
