@@ -91,5 +91,4 @@ rm -rf %{buildroot}
 %{_bindir}/dc1394_vloopback
 %{_includedir}/libdc1394
 %{_libdir}/*.so
-%{_libdir}/*.la
 %{_libdir}/*.a
