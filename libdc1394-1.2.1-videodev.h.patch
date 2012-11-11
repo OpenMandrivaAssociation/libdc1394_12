@@ -1,0 +1,11 @@
+--- examples/dc1394_vloopback.c.v4l	2006-03-19 06:28:32.000000000 +0100
++++ examples/dc1394_vloopback.c	2011-05-02 19:07:54.000000000 +0200
+@@ -68,7 +68,7 @@
+ #include <signal.h>
+ #define _LINUX_TIME_H
+ #define _DEVICE_H_
+-#include <linux/videodev.h>
++#include <libv4l1-videodev.h>
+ #include <getopt.h>
+ 
+ #include <libraw1394/raw1394.h>
