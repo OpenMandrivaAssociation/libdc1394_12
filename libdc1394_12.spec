@@ -14,6 +14,7 @@ Source0:	%{oname}-%{version}.tar.bz2
 Patch0:		libdc1394-0.9.5-lib64.patch
 Patch1:		libdc1394-1.2.1-clk_tck-deprecated.patch
 Patch2:		libdc1394-1.2.1-videodev.h.patch
+Patch3:		libdc1394-automake-1.13.patch
 BuildRequires: 	libraw1394_8-devel
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xv)
@@ -57,6 +58,7 @@ This archive contains the header-files for libdc1394 development
 %patch0 -p1 -b .lib64
 %patch1 -p1 -b .clk_tck
 %patch2 -p0 -b .v4l
+%patch3 -p1 -b .am113~
 autoreconf -fi
 
 %build
