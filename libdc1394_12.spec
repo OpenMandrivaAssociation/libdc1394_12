@@ -15,10 +15,10 @@ Patch0:		libdc1394-0.9.5-lib64.patch
 Patch1:		libdc1394-1.2.1-clk_tck-deprecated.patch
 Patch2:		libdc1394-1.2.1-videodev.h.patch
 Patch3:		libdc1394-automake-1.13.patch
-BuildRequires: 	libraw1394_8-devel
+BuildRequires: 	pkgconfig(libraw1394)
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xv)
-BuildRequires:	libv4l-devel
+BuildRequires:	pkgconfig(libv4l1)
 
 %description
 libdc1394 is a library that is intended to provide a high level programming
