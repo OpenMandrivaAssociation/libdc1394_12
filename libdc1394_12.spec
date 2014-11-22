@@ -26,7 +26,7 @@ interface for application developers who wish to control IEEE 1394 based
 cameras that conform to the 1394-based Digital Camera Specification (found at
 http://www.1394ta.org/).
 
-%if %{_lib} != lib
+%if "%{_lib}" != "lib"
 %package -n 	%{libname}
 Summary:	Dynamic library from libdc1394
 Group:		System/Libraries
@@ -59,13 +59,13 @@ This archive contains the header-files for libdc1394 development
 autoreconf -fi
 
 %build
-%configure2_5x --disable-static
+%configure --disable-static
 %make
 
 %install
 %makeinstall_std
 
-%if %{_lib} == lib
+%if "%{_lib}" == "lib"
 %files
 %else
 %files -n %{libname}
@@ -77,4 +77,3 @@ autoreconf -fi
 %{_bindir}/dc1394_vloopback
 %{_includedir}/libdc1394
 %{_libdir}/*.so
-
