@@ -59,6 +59,7 @@ This archive contains the header-files for libdc1394 development
 autoreconf -fi
 
 %build
+export CC=gcc
 %configure --disable-static
 %make
 
