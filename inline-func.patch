@@ -1,0 +1,20 @@
+diff --git a/examples/dc1394_vloopback.c b/examples/dc1394_vloopback.c
+index 1655f6f..074b884 100644
+--- a/examples/dc1394_vloopback.c
++++ b/examples/dc1394_vloopback.c
+@@ -275,6 +275,7 @@ void affine_scale( const unsigned char *src, int src_width, int src_height, unsi
+ 	}
+ }
+ 
++static
+ inline void
+ yuy2_to_yv16( const unsigned char *src, unsigned char *dest, int width, int height)
+ {
+@@ -292,6 +293,7 @@ yuy2_to_yv16( const unsigned char *src, unsigned char *dest, int width, int heig
+ 	}
+ }
+ 
++static
+ inline void
+ yuy2_to_yv12( const unsigned char *src, unsigned char *dest, int width, int height)
+ {
