@@ -57,7 +57,7 @@ This archive contains the header-files for libdc1394 development
 
 %prep
 %setup -qn %{oname}-%{version}
-%apply_patches
+%autopatch -p1
 autoreconf -fi
 
 %build
