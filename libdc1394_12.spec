@@ -9,7 +9,7 @@ Version:	1.2.1
 Release:	25
 License:	GPLv2+
 Group:		System/Libraries
-Url:		http://sourceforge.net/projects/libdc1394/
+Url:		https://sourceforge.net/projects/libdc1394/
 Source0:	%{oname}-%{version}.tar.bz2
 Patch0:		libdc1394-0.9.5-lib64.patch
 Patch1:		libdc1394-1.2.1-clk_tck-deprecated.patch
