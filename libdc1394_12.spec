@@ -17,6 +17,11 @@ Patch2:		libdc1394-1.2.1-videodev.h.patch
 Patch3:		libdc1394-automake-1.13.patch
 # https://bugs.gentoo.org/383295
 Patch4:		inline-func.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires: 	pkgconfig(libraw1394) = 1.3.0
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(xv)
